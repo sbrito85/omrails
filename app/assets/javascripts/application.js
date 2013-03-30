@@ -15,3 +15,16 @@
 //= require jquery.masonry.min.js
 //= require bootstrap
 //= require_tree .
+$(document).ready(function() {
+
+        var modal=$('#modal');
+        $('#edit_house_link').click(function(e) {
+          var edit_url = $(this).attr('href'); 
+          modal.load(edit_url + ' #content',function(){
+            modal.dialog("open");
+          });
+        });
+        modal.dialog({ autoOpen: false, title: "Your title", draggable: true,
+        resizable: false, modal: true, width:'auto'});
+
+    });

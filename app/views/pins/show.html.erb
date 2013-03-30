@@ -15,11 +15,11 @@
 </p>
 
 <% if current_user == @pin.user %>
-  <%= link_to 'Edit', edit_pin_path(@pin) %> |
+  <%= link_to "Edit", "#myModal", "data-toggle" => "modal" %> |
   <% end %>
 <%= link_to 'Back', pins_path %>
 </div>
 </div>
 </div>
 
-
+<%= render 'pins/modal' %>
